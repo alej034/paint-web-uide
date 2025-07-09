@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Web - UIDE</title>
+</head>
+<body>
+    <div class="paint-container">
+        <div class="toolbar">
+            <h3>Herramientas</h3>
+            <div class="tool-section">
+                <button class="tool-button active" id="brush" title="Pincel libre">
+                    🖌️<br>Pincel
+                </button>
+                <button class="tool-button" id="line" title="Línea recta">
+                    📏<br>Línea
+                </button>
+                <button class="tool-button" id="rectangle" title="Rectángulo">
+                    ⬜<br>Rectángulo
+                </button>
+                <button class="tool-button" id="circle" title="Círculo">
+                    ⭕<br>Círculo
+                </button>
+                <button class="tool-button" id="eraser" title="Borrador">
+                    🧹<br>Borrador
+                </button>
+            </div>
+
+            <h3>Colores</h3>
+            <div class="color-palette">
+                <button class="color-button active" style="background-color: #000000" data-color="#000000" title="Negro"></button>
+                <button class="color-button" style="background-color: #ff0000" data-color="#ff0000" title="Rojo"></button>
+                <button class="color-button" style="background-color: #0000ff" data-color="#0000ff" title="Azul"></button>
+                <button class="color-button" style="background-color: #00ff00" data-color="#00ff00" title="Verde"></button>
+                <button class="color-button" style="background-color: #ffff00" data-color="#ffff00" title="Amarillo"></button>
+                <button class="color-button" style="background-color: #ff8800" data-color="#ff8800" title="Naranja"></button>
+                <button class="color-button" style="background-color: #8800ff" data-color="#8800ff" title="Morado"></button>
+                <button class="color-button" style="background-color: #8b4513" data-color="#8b4513" title="Café"></button>
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-button clear-btn" id="clear" title="Limpiar canvas">
+                    🗑️ Limpiar
+                </button>
+                <button class="action-button save-btn" id="save" title="Guardar como PNG">
+                    💾 Guardar
+                </button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <div class="canvas-wrapper">
+                <canvas id="canvas" width="800" height="600"></canvas>
+            </div>
+            <div class="canvas-info">
+                Canvas: 800x600px | Herramienta: <span id="current-tool">Pincel</span> | Color: <span id="current-color">Negro</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+</body>
+</html>
